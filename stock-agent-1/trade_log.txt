@@ -1,0 +1,118 @@
+========================================
+AI Stock Trading Simulation - Trade Log
+========================================
+
+2026-03-11 10:38 PDT
+
+BUY
+
+Ticker: AMD
+Price: 204.43
+Shares: 1
+Total Cost: 204.43
+
+Reason:
+Moderate upward momentum (+0.59%), price above previous close,
+within 0.5%-2% target range. Solid entry signal.
+
+Stop Loss: 200.34
+Take Profit: 214.65
+
+----------------------------------------
+
+2026-03-11 10:38 PDT
+
+BUY
+
+Ticker: GOOGL
+Price: 308.68
+Shares: 1
+Total Cost: 308.68
+
+Reason:
+Steady upward momentum (+0.53%), price above open ($306.97),
+consistent buying pressure throughout the day.
+
+Stop Loss: 302.51
+Take Profit: 324.11
+
+----------------------------------------
+
+2026-03-11 11:00 PDT
+
+BUY
+
+Ticker: TSLA
+Price: 405.95
+Shares: 1
+Total Cost: 405.95
+
+Reason:
+Strong upward momentum (+1.68%), price well above open ($400.73),
+sustained buying pressure. Within 0.5%-2% target range.
+
+Stop Loss: 397.83
+Take Profit: 426.25
+
+----------------------------------------
+
+
+2026-03-11 12:10 PDT
+
+BUY
+
+Ticker: COIN
+Price: 197.69
+Shares: 1
+Total Cost: 197.69
+
+Reason:
+Upward momentum (+0.60%), price above open ($196.70),
+within 0.5%-2% target range. New position under updated 5-slot rule.
+
+Stop Loss: 193.74
+Take Profit: 207.57
+
+----------------------------------------
+
+[2026-03-12 08:40 PDT] SELL AMD | Reason: Stop Loss | Entry: $204.43 | Exit: $198.92 | Shares: 1 | P/L: -$5.51 | Capital: $1,082.17
+
+[2026-03-12 09:10 PDT] SELL TSLA | Reason: Stop Loss | Entry: $405.95 | Exit: $397.43 | Shares: 1 | P/L: -$8.52 | Capital: $1,479.60
+
+[2026-03-12 12:10 PDT] SELL COIN | Reason: Stop Loss | Entry: $197.69 | Exit: $193.26 | Shares: 1 | P/L: -$4.43 | Capital: $1,672.86
+
+[2026-03-12 12:40 PDT] BUY PLTR | Price: $153.79 | Shares: 1 | Cost: $153.79 | Stop Loss: $150.71 | Take Profit: $161.48 | Reason: Upward momentum (+1.44%), price above open ($151.52), ideal 0.5%-2% range | Capital: $1,519.07
+
+[2026-03-12 12:40 PDT] BUY WMT | Price: $125.09 | Shares: 1 | Cost: $125.09 | Stop Loss: $122.59 | Take Profit: $131.34 | Reason: Upward momentum (+1.30%), price above open ($122.58), strong intraday recovery | Capital: $1,393.98
+
+[2026-03-13 06:35 PDT] BUY NVDA | Price: $185.68 | Shares: 1 | Cost: $185.68 | Stop Loss: $181.97 | Take Profit: $194.96 | Reason: Strong bounce (+1.39%), price above open ($183.81), semiconductor recovery | Capital: $1,208.30
+
+[2026-03-13 06:35 PDT] BUY SOFI | Price: $17.89 | Shares: 8 | Cost: $143.12 | Stop Loss: $17.53 | Take Profit: $18.78 | Reason: Upward momentum (+1.07%), price above open ($17.81), affordable fintech play | Capital: $1,065.18
+
+[2026-03-13 07:55 PDT] SELL PLTR | Reason: Stop Loss | Entry: $153.79 | Exit: $150.64 | Shares: 1 | P/L: -$3.15 | Capital: $1,215.82
+
+[2026-03-13 08:25 PDT] SELL NVDA | Reason: Stop Loss | Entry: $185.68 | Exit: $181.92 | Shares: 1 | P/L: -$3.76 | Capital: $1,397.74
+
+[2026-03-13 09:15 PDT] SELL GOOGL | Reason: Stop Loss | Entry: $308.68 | Exit: $302.39 | Shares: 1 | P/L: -$6.29 | Capital: $1,700.13
+
+[2026-03-16 07:10 PDT] BUY SNAP | Price: $4.64 (actual: $4.6423 w/ 0.05% slippage) | Shares: 29 | Cost: $134.63 | Stop Loss: $4.36 (-6%) | Take Profit: $4.83 (+4%) | Score: 5 | Signals: RSI 29 oversold, MACD histogram positive, dp +1.75% in range, day_position 0.58 | Capital: $1,565.50
+
+[2026-03-17 06:40 PDT] TRAILING STOP SNAP | SL raised $4.36 → $4.69 (lock 1%) | Trigger: profit +3.40% at $4.80
+
+[2026-03-17 09:10 PDT] SELL SNAP | Reason: Trailing Stop | Entry: $4.6423 | Exit: $4.6877 (w/ 0.05% slippage) | Shares: 29 | P/L: +$1.32 | Capital: $1,701.44 | ★ FIRST PROFITABLE TRADE ★
+
+[2026-03-17 09:20 PDT] BUY PLTR | Price: $155.65 (actual: $155.73 w/ 0.05% slippage) | Shares: 1 | Cost: $155.73 | Stop Loss: $146.38 (-6%) | Take Profit: $161.96 (+4%) | Score: 7 | Signals: RSI 58.1, SMA5>SMA20 bullish, MACD positive, dp +1.92%, day_pos 0.76 | Capital: $1,545.71
+
+[2026-03-17 11:10 PDT] SELL SOFI | Reason: Stop Loss (day low $16.66 breached SL $16.82) | Entry: $17.89 | Exit: $16.8116 (SL price w/ 0.05% slippage) | Shares: 8 | P/L: -$8.63 | Capital: $1,680.20 | Note: SOFI flash crash from $17.68→$16.66 in 10min, bounced to $17.01
+
+[2026-03-18 07:00 PDT] BUY RIVN | Price: $15.95 (actual: $15.958 w/ 0.05% slippage) | Shares: 8 | Cost: $127.66 | Stop Loss: $15.00 (-6%) | Take Profit: $16.60 (+4%) | Score: 6 | Signals: RSI 52, SMA5>SMA20 bullish, MACD positive, dp +0.82%, day_pos 0.78 | Capital: $1,552.54
+
+[2026-03-19 06:30 PDT] TRAILING STOP RIVN | SL raised $15.00 → $16.118 (lock 1%) | Trigger: profit +3.65% at $16.54
+
+[2026-03-19 06:40 PDT] SELL RIVN | Reason: Take Profit | Entry: $15.958 | Exit: $16.5917 (TP $16.60 w/ 0.05% slippage) | Shares: 8 | P/L: +$5.07 | Capital: $1,685.27 | RIVN surged +7.66% today, hit TP cleanly
+
+[2026-03-19 08:10 PDT] BUY LCID | Price: $10.12 (actual: $10.1251 w/ 0.05% slippage) | Shares: 13 | Cost: $131.63 | Stop Loss: $9.52 (-6%) | Take Profit: $10.53 (+4%) | Score: 5 | Signals: RSI 49.3, SMA5>price, MACD histogram +0.0305, dp +1.71%, day_pos 0.725, market_score 0.50 (cautious mode) | Capital: $1,553.64
+
+[2026-03-20 06:30 PDT] TRAILING STOP LCID | SL raised $9.52 → $10.1251 (保本) | Trigger: profit +2.42% at $10.37
+
+[2026-03-20 12:40 PDT] SELL LCID | Reason: Breakeven Stop | Entry: $10.1251 | Exit: $10.1200 (SL $10.1251 w/ 0.05% slippage) | Shares: 13 | P/L: -$0.07 (slippage only) | Capital: $1,685.20 | Market crash day (1/16 green), LCID dropped from $10.44 high to $9.98 low, breakeven SL saved ~$7.80 vs original -6% SL

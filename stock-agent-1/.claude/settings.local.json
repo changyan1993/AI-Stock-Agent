@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "WebFetch(domain:www.barchart.com)",
+      "WebFetch(domain:finance.yahoo.com)"
+    ]
+  }
+}

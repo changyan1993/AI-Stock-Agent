@@ -1,0 +1,61 @@
+=== Agent-2 保守型 每日报告 ===
+
+[Agent-2 保守型] 2026-03-16 (Monday)
+Starting Capital: $2,000.00
+Ending Capital: $2,000.00
+Daily Profit: $0.00
+Trades: 0 (无交易 - 市场反弹日，无超卖信号达标)
+Positions: 0
+Total Capital: $2,000.00
+Total P&L: $0.00
+Neutral Day (No Trades)
+Note: USB (RSI 34.2, score 6) 开盘达标但 dp=+1.3% 不满足 dp<-1% 过滤。DOW/HPQ 全天 dp<-1% 但 RSI>35/score<6。Paper Trading Day 1 - 信号稀少符合预期（回测6个月仅12笔交易）。
+
+[Agent-2 保守型] 2026-03-17 (Tuesday)
+Starting Capital: $2,000.00
+Ending Capital: $2,000.00
+Daily Profit: $0.00
+Trades: 0 (无交易 - 市场强反弹日，CLF逆市暴跌-3.3%但score=3/新闻看空，不达标)
+Positions: 0
+Total Capital: $2,000.00
+Total P&L: $0.00
+Neutral Day (No Trades)
+Note: Day 2零交易。市场整体强势反弹(PFE +4%, DOW +3.3%, GM +1.3%)。CLF是唯一深跌股(dp=-3.3%, RSI=27.8)但新闻强烈看空(-2)导致score仅3(需>=6)。AA午后转跌-1.5%但RSI=56.6远不超卖。连续2天零交易，符合V1.1回测预期(6月12笔≈每月2笔)。
+
+[Agent-2 保守型] 2026-03-18 (Wednesday)
+Starting Capital: $2,000.00
+Ending Capital: $2,000.00
+Daily Profit: $0.00
+Trades: 0 (无交易 - NEM score=6但RSI=36.2>35差1.2点未达标，市场大幅下跌日)
+Positions: 0
+Total Capital: $2,000.00
+Total P&L: $0.00
+Neutral Day (No Trades)
+Note: Day 3零交易。市场转弱(NEM -3.7%, MO -1.9%, PFE -1.8%, KO -1.7%, VZ -1.5%, AA -1.3%)。NEM首次达到score=6/BUY且dp<-1%，但RSI=36.2(日线)卡在35阈值外1.2点。今日收盘后NEM RSI将大幅下降(预计~30-32)，明天极可能触发首笔交易。连续3天零交易(3天/0笔)。
+
+=== [Agent-2 保守型] 2026-03-19 每日报告 ===
+Starting Capital: $2,000.00
+Ending Capital: $1,973.44
+Daily Profit: -$26.56 (-1.33%)
+交易明细:
+  1. BUY NEM x3 @ $106.6133 (06:30 PDT) - analyze.js score=6, RSI=28.4
+  2. SELL NEM x3 @ $97.7611 (06:40 PDT) - 止损触发, P&L: -$26.56 (-8.3%)
+持仓: 无
+总资金: $1,973.44
+总盈亏: -$26.56 (-1.33%)
+胜率: 0/1 (0%)
+=== Loss Day ===
+备注: NEM开盘跳水-8.9%, 盘前数据与开盘价差异大, 10分钟内止损出局
+
+=== [Agent-2 保守型] 2026-03-20 每日报告 ===
+Starting Capital: $1,973.44
+Ending Capital: $1,973.44 (未实现盈亏未计入)
+Daily Profit (已实现): $0.00
+交易明细:
+  1. BUY CLF x44 @ $8.024 (09:20 PDT) - analyze.js score=6, RSI=24.7, dp=-1.96%
+  无卖出（持仓过周末）
+持仓: CLF x44 @ $8.024 → 收盘 $7.805 (浮亏 -$9.64 / -2.73%)
+总资金(含浮亏): $1,973.44 - $9.64 = ~$1,963.80
+总盈亏(已实现): -$26.56
+=== Flat Day (无已实现盈亏，持仓浮亏) ===
+备注: CLF 今日跌 -4.58%，盘中低至 $7.73，入场后持续走弱，等待下周反弹

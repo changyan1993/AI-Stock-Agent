@@ -1,0 +1,299 @@
+========================================
+AI Stock Trading Simulation - Daily Report
+========================================
+
+
+========================================
+Daily Report - 2026-03-11 (PDT)
+========================================
+
+Starting Capital: $2,000.00
+Ending Capital (unrealized): $1,998.88
+
+Daily Profit (unrealized): -$1.12
+
+Trades Today: 4 (all buys, no sells triggered)
+
+Trade Details:
+  1. BUY AMD  @ $204.43 x1 (10:38) → Close: $204.36 (-$0.07)
+  2. BUY GOOGL @ $308.68 x1 (10:38) → Close: $307.93 (-$0.76)
+  3. BUY TSLA @ $405.95 x1 (11:00) → Close: $406.39 (+$0.44)
+  4. BUY COIN @ $197.69 x1 (12:10) → Close: $196.95 (-$0.74)
+
+Open Positions (4):
+  AMD:   1 share @ $204.43 | Close: $204.36 | SL: $200.34 | TP: $214.65
+  GOOGL: 1 share @ $308.68 | Close: $307.93 | SL: $302.51 | TP: $324.11
+  TSLA:  1 share @ $405.95 | Close: $406.39 | SL: $397.83 | TP: $426.25
+  COIN:  1 share @ $197.69 | Close: $196.95 | SL: $193.74 | TP: $207.57
+
+Cash: $883.25
+Position Value: $1,115.63
+Total Account Value: $1,998.88
+
+Result: Loss Day (-$1.12)
+========================================
+
+========================================
+Daily Report - 2026-03-12 (PDT)
+========================================
+
+Starting Capital: $1,998.88 (from previous day)
+Ending Capital (cash): $1,393.98
+
+Daily Realized P/L: -$18.46
+Total Realized P/L: -$19.58
+
+Trades Today: 5 (3 stop-loss sells, 2 buys)
+
+Trade Details:
+  1. SELL AMD  @ $198.92 x1 (08:40) | Entry: $204.43 | P/L: -$5.51 | Reason: Stop Loss
+  2. SELL TSLA @ $397.43 x1 (09:10) | Entry: $405.95 | P/L: -$8.52 | Reason: Stop Loss
+  3. SELL COIN @ $193.26 x1 (12:10) | Entry: $197.69 | P/L: -$4.43 | Reason: Stop Loss
+  4. BUY  PLTR @ $153.79 x1 (12:40) | SL: $150.71 | TP: $161.48
+  5. BUY  WMT  @ $125.09 x1 (12:40) | SL: $122.59 | TP: $131.34
+
+Open Positions (3):
+  GOOGL: 1 share @ $308.68 | Close: $303.60 | SL: $302.51 | TP: $324.11 | Unrealized: -$5.08
+  PLTR:  1 share @ $153.79 | Close: $153.47 | SL: $150.71 | TP: $161.48 | Unrealized: -$0.32
+  WMT:   1 share @ $125.09 | Close: $125.25 | SL: $122.59 | TP: $131.34 | Unrealized: +$0.16
+
+Cash: $1,393.98
+Position Value: $303.60 + $153.47 + $125.25 = $582.32
+Total Account Value: $1,976.30
+
+Market Summary: Broad selloff across all sectors. 14/16 tracked stocks closed red.
+Only PLTR (+1.23%) and WMT (+1.43%) finished green — both added to portfolio at 12:40.
+Expanded watchlist from 10 to 16 stocks mid-day (added INTC, MU, BABA, PLTR, SOFI, WMT).
+
+Result: Loss Day (-$18.46 realized, -$23.70 total including unrealized)
+========================================
+
+========================================
+Daily Report - 2026-03-13 (PDT)
+========================================
+
+Starting Capital: $1,976.30 (from previous day total account value)
+Ending Capital (cash): $1,700.13
+
+Daily Realized P/L: -$13.20
+Total Realized P/L: -$31.66
+
+Trades Today: 5 (2 buys, 3 stop-loss sells)
+
+Trade Details:
+  1. BUY  NVDA @ $185.68 x1 (06:35) | SL: $181.97 | TP: $194.96 | Reason: Semiconductor bounce +1.39%
+  2. BUY  SOFI @ $17.89  x8 (06:35) | SL: $17.53  | TP: $18.78  | Reason: Fintech momentum +1.07%
+  3. SELL PLTR @ $150.64 x1 (07:55) | Entry: $153.79 | P/L: -$3.15 | Reason: Stop Loss
+  4. SELL NVDA @ $181.92 x1 (08:25) | Entry: $185.68 | P/L: -$3.76 | Reason: Stop Loss
+  5. SELL GOOGL @ $302.39 x1 (09:15) | Entry: $308.68 | P/L: -$6.29 | Reason: Stop Loss (held since 03/11)
+
+Open Positions (2):
+  WMT:  1 share @ $125.09 | Close: $126.525 | SL: $122.59 | TP: $131.34 | Unrealized: +$1.44
+  SOFI: 8 shares @ $17.89 | Close: $17.755  | SL: $17.53  | TP: $18.78  | Unrealized: -$1.08
+
+Cash: $1,700.13
+Position Value: $126.525 + $142.04 = $268.57
+Total Account Value: $1,968.70
+
+Market Summary: Morning crash wiped out 3 positions (PLTR, NVDA, GOOGL all hit stop-loss).
+SOFI survived a terrifying day — touched stop-loss line $17.53 exactly at 12:40, then rallied
+to close at $17.755 (+$0.225 from the low). WMT was the star performer, closing +0.95% at $126.525.
+Watchlist updated mid-day: removed expensive stocks (META, TSLA, MSFT, etc.), added cheap
+high-potential stocks (SNAP, NIO, MARA, LCID, F, RIVN, PINS, T, OPEN).
+
+Result: Loss Day (-$13.20 realized, -$7.60 total including unrealized from start of day)
+========================================
+
+========================================
+Daily Report - 2026-03-16 (PDT)
+========================================
+
+Starting Account Value: $1,968.73 (cash $1,700.13 + WMT $126.52 + SOFI 8×$17.76=$142.08)
+
+Daily Realized P/L: $0.00
+Total Realized P/L: -$31.66
+
+Trades Today: 1 (1 buy, 0 sells)
+
+Trade Details:
+  1. BUY SNAP @ $4.6423 (w/ 0.05% slippage) x29 (07:10) | SL: $4.36 (-6%) | TP: $4.83 (+4%) | Score: 5 | RSI 29 oversold
+
+Open Positions (3):
+  WMT:  1 share  @ $125.09 | Close: $126.00 | SL: $117.58 | TP: $130.09 | Unrealized: +$0.91 (+0.73%)
+  SOFI: 8 shares @ $17.89  | Close: $17.64  | SL: $16.82  | TP: $18.61  | Unrealized: -$2.00 (-1.40%)
+  SNAP: 29 shares @ $4.6423 | Close: $4.675 | SL: $4.36  | TP: $4.83  | Unrealized: +$0.95 (+0.70%)
+
+Cash: $1,565.50
+Position Value: $126.00 + $141.12 + $135.58 = $402.70
+Total Account Value: $1,968.20
+
+Daily Change: -$0.53 (-0.03%)
+Cumulative from $2,000: -$31.80 (-1.59%)
+
+Market Summary: Strong open (13/16 green, score 0.81) but most gains faded by midday.
+INTC +4.96% led the day on chip sector news. SNAP bought at 07:10 on RSI oversold signal,
+closed near day high $4.675 (+2.52% from prev close). WMT steady despite market weakness.
+SOFI weakest of the three, drifted lower all day. First day with correct V1.1 parameters
+(-6% SL / +4% TP with 0.05% slippage). No stop losses triggered — 6-trade losing streak halted.
+
+Result: Flat Day (-$0.53 unrealized, $0.00 realized)
+========================================
+
+========================================
+Daily Report - 2026-03-17 (PDT)
+========================================
+
+Starting Account Value: $1,968.25 (cash $1,565.50 + WMT $125.99 + SOFI 8×$17.63=$141.04 + SNAP 29×$4.68=$135.72)
+
+Daily Realized P/L: -$7.31 (SNAP +$1.32, SOFI -$8.63)
+Total Realized P/L: -$40.09
+
+Trades Today: 3 (1 trailing stop sell, 1 stop loss sell, 1 buy)
+
+Trade Details:
+  1. SELL SNAP  × 29 @ $4.6877 (09:10) | Entry: $4.6423 | P/L: +$1.32 | Reason: Trailing Stop (1% lock) ★ First Win ★
+  2. BUY  PLTR × 1  @ $155.73  (09:20) | SL: $146.38 | TP: $161.96 | Score: 7 | SMA bullish + MACD positive
+  3. SELL SOFI  × 8  @ $16.8116 (11:10) | Entry: $17.89  | P/L: -$8.63 | Reason: Stop Loss (flash crash $18.26→$16.66)
+
+Open Positions (2):
+  WMT:  1 share @ $125.09 | Close: $125.05 | SL: $117.58 | TP: $130.09 | Unrealized: -$0.04 (-0.03%)
+  PLTR: 1 share @ $155.73 | Close: $154.98 | SL: $146.38 | TP: $161.96 | Unrealized: -$0.75 (-0.48%)
+
+Cash: $1,680.20
+Position Value: $125.05 + $154.98 = $280.03
+Total Account Value: $1,960.23
+
+Daily Change: -$8.02 (-0.41%)
+Cumulative from $2,000: -$39.77 (-1.99%)
+
+Market Summary: Volatile day. SOFI opened +3.5% then flash crashed to -5.6% in 10 minutes (news-driven?),
+triggering SL at $16.82. SNAP trailing stop worked perfectly — locked +1% profit at $4.69 after
+opening at $4.80. PLTR bought at 09:20 on score 7, held steady +1.5% intraday then faded to flat.
+WMT weakest day since holding, dipped below entry to $124.86.
+
+Win/Loss: 1W / 8L (12.5%) — SNAP first profitable trade using V1.1 parameters
+
+Result: Loss Day (-$7.31 realized)
+========================================
+
+========================================
+Daily Report - 2026-03-18 (PDT)
+========================================
+
+Starting Account Value: $1,960.23 (cash $1,680.20 + WMT $125.08 + PLTR $155.08)
+
+Daily Realized P/L: $0.00
+Total Realized P/L: -$40.09
+
+Trades Today: 1 (1 buy, 0 sells)
+
+Trade Details:
+  1. BUY RIVN × 8 @ $15.958 (07:00) | SL: $15.00 (-6%) | TP: $16.60 (+4%) | Score: 6
+
+Open Positions (3):
+  WMT:  1 share  @ $125.09 | Close: $121.88 | SL: $117.58 | TP: $130.09 | Unrealized: -$3.21 (-2.57%)
+  PLTR: 1 share  @ $155.73 | Close: $152.67 | SL: $146.38 | TP: $161.96 | Unrealized: -$3.06 (-1.97%)
+  RIVN: 8 shares @ $15.958 | Close: $15.515 | SL: $15.00  | TP: $16.60 | Unrealized: -$3.54 (-2.78%)
+
+Cash: $1,552.54
+Position Value: $121.88 + $152.67 + (8×$15.515=$124.12) = $398.67
+Total Account Value: $1,951.21
+
+Daily Change: -$9.02 (-0.46%)
+Cumulative from $2,000: -$48.79 (-2.44%)
+
+Market Summary: Broad selloff day. WMT -2.56% (worst day since holding, low $121.83).
+PLTR -1.55% (low $152.63). RIVN -1.93% (bought at 07:00, immediately sold off with market).
+No stop losses triggered — V1.1 -6% SL buffer held all positions through the downturn.
+Zero trades executed (no sells, 1 buy RIVN at open).
+
+Result: Loss Day ($0.00 realized, -$9.02 unrealized from start of day)
+========================================
+
+========================================
+Daily Report - 2026-03-19 (PDT)
+========================================
+
+Starting Account Value: $1,951.21 (cash $1,552.54 + WMT $121.98 + PLTR $152.77 + RIVN 8×$15.53=$124.24)
+
+Daily Realized P/L: +$5.07
+Total Realized P/L: -$35.02
+
+Trades Today: 3 (1 take-profit sell, 1 trailing stop adjustment, 1 buy)
+
+Trade Details:
+  1. TRAILING STOP RIVN (06:30) | SL raised $15.00 → $16.118 (lock 1%) | Profit +3.65%
+  2. SELL RIVN × 8 @ $16.5917 (06:40) | Entry: $15.958 | P/L: +$5.07 | Reason: Take Profit (+4%)
+  3. BUY  LCID × 13 @ $10.1251 (08:10) | SL: $9.52 (-6%) | TP: $10.53 (+4%) | Score: 5 | Market score 0.50 (cautious mode)
+
+Open Positions (3):
+  WMT:  1 share  @ $125.09  | Close: $121.08 | SL: $117.58 | TP: $130.09 | Unrealized: -$4.01 (-3.21%)
+  PLTR: 1 share  @ $155.73  | Close: $155.65 | SL: $146.38 | TP: $161.96 | Unrealized: -$0.08 (-0.05%)
+  LCID: 13 shares @ $10.1251 | Close: $10.28 | SL: $9.52   | TP: $10.53 | Unrealized: +$2.01 (+1.53%)
+
+Cash: $1,553.64
+Position Value: $121.08 + $155.65 + (13×$10.28=$133.64) = $410.37
+Total Account Value: $1,964.01
+
+Daily Change: +$12.80 (+0.66%)
+Cumulative from $2,000: -$35.99 (-1.80%)
+
+Market Summary: Dramatic intraday reversal. Opened with only 2/16 green (score 0.125), steadily
+recovered through the day, closing at 10/16 green (score 0.625). RIVN gapped up +7.66% at open,
+triggered take profit at 06:40 for +$5.07 (3rd profitable trade). LCID bought at 08:10 when market
+score first crossed 0.4 (cautious mode, 8% position). WMT hit scary low of $119.27 early (1.4%
+from SL) but recovered to $121.08 by close. PLTR surged to $156.15 in final hour, nearly hit TP.
+Market sentiment filter correctly blocked buying during early weakness (06:00-08:00).
+
+Key learnings: Market score filter prevented panic buying in weak market. Patience paid off —
+LCID entry at score 0.50 instead of chasing at 0.125 was correct. RIVN take profit executed
+cleanly on opening gap.
+
+Win/Loss: 2W / 7L (22.2%) — SNAP +$1.32, RIVN +$5.07
+
+Result: Profitable Day (+$5.07 realized, +$12.80 total including unrealized)
+========================================
+
+========================================
+Daily Report - 2026-03-20 (PDT) — FRIDAY
+========================================
+
+Starting Account Value: $1,964.01 (cash $1,553.64 + WMT $121.09 + PLTR $155.68 + LCID 13×$10.30=$133.90)
+
+Daily Realized P/L: -$0.07
+Total Realized P/L: -$35.09
+
+Trades Today: 1 (1 breakeven stop sell)
+
+Trade Details:
+  1. TRAILING STOP LCID (06:30) | SL raised $9.52 → $10.1251 (breakeven) | Profit +2.42%
+  2. SELL LCID × 13 @ $10.12 (12:40) | Entry: $10.1251 | P/L: -$0.07 | Reason: Breakeven Stop
+     Note: Market crash day, LCID dropped from $10.44 high to $9.98 low. Breakeven SL saved ~$7.80
+
+Open Positions (2):
+  WMT:  1 share @ $125.09 | Close: $118.96 | SL: $117.58 | TP: $130.09 | Unrealized: -$6.13 (-4.90%)
+  PLTR: 1 share @ $155.73 | Close: $150.225 | SL: $146.38 | TP: $161.96 | Unrealized: -$5.51 (-3.54%)
+
+Cash: $1,685.20
+Position Value: $118.96 + $150.225 = $269.19
+Total Account Value: $1,954.39
+
+Daily Change: -$9.62 (-0.49%)
+Cumulative from $2,000: -$45.61 (-2.28%)
+
+Market Summary: Brutal Friday selloff. Market opened weak (1/16 green at 07:00) and never recovered.
+Only T (+2.29%) closed green out of 16 stocks. WMT hit scary low $118.47 (-2.5% from prev close,
+only $0.89 from -6% SL). PLTR crashed to $149.09 (-3.93%). LCID breakeven stop saved $7.80 —
+triggered at $10.12 while LCID later fell to $9.98. INTC -4.88%, MARA -7.27%, NIO -7.89%,
+RIVN -7.44%. Market sentiment filter correctly prevented any new buys all day (score never
+exceeded 0.25).
+
+Key decisions validated:
+1. LCID breakeven stop (set yesterday at +2.42%) → saved ~$7.80 in a crash
+2. Market score filter blocked all buying in extreme weakness
+3. RIVN sold yesterday at $16.59 → today closed $14.92 (-10% from our exit)
+
+Win/Loss: 2W / 7L / 1BE (20% win, 10% breakeven) — SNAP +$1.32, RIVN +$5.07, LCID ±$0
+
+Result: Loss Day (-$0.07 realized, -$9.62 total including unrealized)
+========================================

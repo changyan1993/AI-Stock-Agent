@@ -1,0 +1,52 @@
+{
+  "capital": 1992.26,
+  "positions": [],
+  "trade_history": [
+    {
+      "ticker": "CLSK",
+      "entry_price": 10.3052,
+      "exit_price": 9.995,
+      "shares": 15,
+      "profit": -4.65,
+      "entry_time": "2026-03-16 06:30 PDT",
+      "exit_time": "2026-03-16 07:50 PDT",
+      "reason": "stop_loss"
+    },
+    {
+      "ticker": "WULF",
+      "entry_price": 15.928,
+      "exit_price": 16.002,
+      "shares": 9,
+      "profit": 0.67,
+      "entry_time": "2026-03-16 06:40 PDT",
+      "exit_time": "2026-03-17 06:50 PDT",
+      "reason": "trailing_stop"
+    },
+    {
+      "ticker": "UPST",
+      "entry_price": 29.1346,
+      "exit_price": 28.2459,
+      "shares": 5,
+      "profit": -4.44,
+      "entry_time": "2026-03-17 06:50 PDT",
+      "exit_time": "2026-03-17 08:10 PDT",
+      "reason": "stop_loss"
+    },
+    {
+      "ticker": "DKNG",
+      "entry_price": 25.5328,
+      "exit_price": 25.6472,
+      "shares": 6,
+      "profit": 0.68,
+      "entry_time": "2026-03-18 06:40 PDT",
+      "exit_time": "2026-03-18 10:30 PDT",
+      "reason": "trailing_stop"
+    }
+  ],
+  "daily_profit": 0,
+  "total_profit": -7.74,
+  "today_date": "2026-03-20",
+  "last_update": "2026-03-20 13:50 PDT",
+  "trades_today": 0,
+  "bankrupt": false
+}
