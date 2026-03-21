@@ -4,7 +4,7 @@
 | Agent | 策略 | 股票池 | 初始资金 |
 |-------|------|--------|----------|
 | Agent-1 动量型 | 技术指标+动量追踪 | SOFI, WMT, INTC, NFLX, BABA, COIN, PLTR, SNAP, NIO, MARA, LCID, F, RIVN, PINS, T, OPEN | $2,000 |
-| Agent-2 保守型 | 超卖反弹，RSI<35买入 | PFE, VZ, CSCO, BAC, USB, KEY, KO, MO, GM, WBA, PARA, HPQ, DOW, NEM, CLF, AA | $2,000 |
+| Agent-2 保守型 | 超卖反弹，RSI<35买入 | PFE, VZ, CSCO, BAC, USB, KEY, KO, MO, GM, BMY, CMCSA, HPQ, DOW, NEM, CLF, AA | $2,000 |
 | Agent-3 激进型 | 追强势股，快进快出 | HOOD, SOUN, IONQ, DKNG, RBLX, AFRM, UPST, HIMS, JOBY, LUNR, CLSK, WULF, SKLZ, QUBT, RGTI, GRAB | $2,000 |
 
 ---

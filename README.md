@@ -4,7 +4,7 @@ A multi-agent AI stock trading simulation system powered by Claude Code. Three a
 
 ## Overview
 
-This project uses Claude Code's cron scheduling to run three independent trading agents, each with a distinct strategy. Agents fetch real-time quotes from Finnhub API every 10 minutes during market hours, execute trades based on technical analysis, and generate daily performance reports.
+This project uses Claude Code's cron scheduling to run three independent trading agents, each with a distinct strategy. Agents fetch real-time quotes from Finnhub API every 10 minutes during US market hours (06:30-13:00 Pacific, Mon-Fri), execute trades based on technical analysis, and generate daily performance reports.
 
 **Starting capital:** $2,000 per agent
 **Market data:** Finnhub API (real-time quotes)
@@ -77,6 +77,7 @@ Each agent maintains:
 - `trading_state.json` — Current capital, positions, trade history, daily stats
 - `trade_log.txt` — Full trade-by-trade log with entry/exit prices and reasons
 - `daily_report.txt` — End-of-day P&L summaries
+- `price_history.json` — Daily closing prices for trend analysis (Agent-1)
 
 ## Requirements
 
