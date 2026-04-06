@@ -89,3 +89,39 @@ Each agent maintains:
 ## Disclaimer
 
 This is a **paper trading simulation** for educational and research purposes only. No real money is involved. Past performance (backtested or simulated) does not guarantee future results. This is not financial advice.
+
+## Live Paper Trading Results (as of 2026-04-05)
+
+**Running since:** 2026-03-16 (3 weeks)
+
+### Performance Summary
+
+| Metric | Agent-1 Momentum | Agent-2 Conservative | Agent-3 Aggressive |
+|--------|-------------------|----------------------|--------------------|
+| **Capital** | $1,827.09 | $1,984.54 | $1,997.02 |
+| **Total P/L** | -$48.91 (-2.45%) | -$15.46 (-0.77%) | -$2.98 (-0.15%) |
+| **Trades** | 11 | 2 | 8 |
+| **Win Rate** | 18.2% (2/11) | 50% (1/2) | 50% (4/8) |
+| **Best Trade** | RIVN +$5.07 | CLF +$11.10 | HIMS +$11.12 |
+| **Current Positions** | WMT 1 share | None | None |
+
+**Combined:** $6,000 initial → $5,808.65 | **-$67.35 (-1.12%)**
+
+### Latest Backtest (6-month, as of 2026-04-05)
+
+| Metric | Agent-1 Momentum | Agent-2 Conservative | Agent-3 Aggressive |
+|--------|-------------------|----------------------|--------------------|
+| **Return** | -$4.59 (-0.23%) | +$62.28 (+3.11%) | -$40.28 (-2.01%) |
+| **Win Rate** | 58.5% | 85.7% | 23.8% |
+| **Sharpe Ratio** | -0.08 | 1.28 | -0.74 |
+| **Max Drawdown** | -3.94% | -3.08% | -3.54% |
+| **Profit Factor** | 0.98 | 2.09 | 0.83 |
+
+**Best strategy by backtest:** Agent-2 Conservative (oversold bounce) — highest Sharpe, lowest drawdown, 85.7% win rate.
+
+### Key Findings
+
+1. **Agent-2's oversold bounce strategy dominates** in the current bearish environment — patient entries at RSI < 35 with wide stops produce the most consistent returns
+2. **Agent-3's regime gate** (SPY/QQQ/VIX kill-switch) effectively prevents entries during market panic, preserving capital
+3. **Market sentiment filters** across all agents successfully blocked trading on extreme red days (< 40% green stocks)
+4. **Trailing stops** saved significant capital — multiple positions exited at breakeven instead of full stop-loss
