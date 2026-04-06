@@ -1,5 +1,5 @@
 {
-  "capital": 1992.26,
+  "capital": 1997.02,
   "positions": [],
   "trade_history": [
     {
@@ -41,12 +41,52 @@
       "entry_time": "2026-03-18 06:40 PDT",
       "exit_time": "2026-03-18 10:30 PDT",
       "reason": "trailing_stop"
+    },
+    {
+      "ticker": "LUNR",
+      "entry_price": 20.39,
+      "exit_price": 20.43,
+      "shares": 7,
+      "profit": 0.28,
+      "entry_time": "2026-03-25 11:20 PDT",
+      "exit_time": "2026-03-25 12:50 PDT",
+      "reason": "trailing_stop"
+    },
+    {
+      "ticker": "WULF",
+      "entry_price": 16.72,
+      "exit_price": 15.90,
+      "shares": 8,
+      "profit": -6.56,
+      "entry_time": "2026-03-25 11:20 PDT",
+      "exit_time": "2026-03-26 07:10 PDT",
+      "reason": "stop_loss"
+    },
+    {
+      "ticker": "HIMS",
+      "entry_price": 19.99,
+      "exit_price": 21.5792,
+      "shares": 7,
+      "profit": 11.12,
+      "entry_time": "2026-03-31 08:50 PDT",
+      "exit_time": "2026-04-01 06:41 PDT",
+      "reason": "take_profit"
+    },
+    {
+      "ticker": "DKNG",
+      "entry_price": 22.20,
+      "exit_price": 22.1889,
+      "shares": 7,
+      "profit": -0.08,
+      "entry_time": "2026-04-01 06:50 PDT",
+      "exit_time": "2026-04-01 13:00 PDT",
+      "reason": "breakeven_stop"
     }
   ],
   "daily_profit": 0,
-  "total_profit": -7.74,
-  "today_date": "2026-03-20",
-  "last_update": "2026-03-20 13:50 PDT",
+  "total_profit": -2.98,
+  "today_date": "2026-04-02",
+  "last_update": "2026-04-02 14:05 PDT",
   "trades_today": 0,
   "bankrupt": false
 }

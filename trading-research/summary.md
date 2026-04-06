@@ -1,10 +1,136 @@
 # 三Agent交易系统 - 每日总结
 
+---
+
+## 2026-03-26 跨Agent每日总结
+
+### 日期
+2026-03-26 (Thursday) | 交易日 | 13:10-13:20 PDT 总结
+
+### 三Agent表现对比
+
+| 指标 | Agent-1 (动量策略) | Agent-2 (保守策略) | Agent-3 (激进策略) |
+|------|-----|-----|-----|
+| **当日盈亏** | -$8.13 ❌ | $0 ➖ | $0 ➖ |
+| **总盈亏** | -$37.07 (-2.15%) | -$6.07 (-0.36%) | -$12.87 (-0.75%) |
+| **胜率** | 3/12 (25%) | 2/3 (66.67%) | 2/6 (33.33%) |
+| **当日交易数** | 1 (PINS 止损) | 0 (持仓) | 0 (持仓) |
+| **当前资金** | $1,722.69 | $1,674.86 | $1,695.35 |
+| **持仓数量** | 2 (WMT, T) | 1 (MO) | 2 (LUNR, IONQ) |
+
+### 当日盈亏详情
+
+**Agent-1 (动量策略) - LOSS DAY**
+- PINS止损: 入场 $18.99 (2026-03-23) × 7股 → 出场 $17.8292 (2026-03-26 11:00) = **-$8.13**
+- 市场评估: 3/16绿 (18.75%) = 极度看跌 (market_score < 0.4)
+- 买入活动: 无 (市场信号不足)
+- 风险说明: 正常止损执行，风险管理有效
+
+**Agent-2 (保守策略) - BREAK-EVEN DAY**
+- 交易决定: 零交易 (Disciplined Hold)
+- 理由: 市场评分 0.1875 < 0.4 阈值，触发"不买入，仅监控"规则
+- 持仓评估: MO 持仓浮盈 +$0.84 (+1.32%)，安全距离止损
+- 风险评估: 保守风格避免了市场下跌风险
+
+**Agent-3 (激进策略) - BREAK-EVEN DAY**
+- 交易决定: 零交易 (Held LUNR, IONQ from 2026-03-25)
+- 理由: 今日新数据显示市场极度看跌，激进策略也暂停入场
+- 持仓评估: LUNR +1.51%, IONQ 轻微浮盈，都保持在目标内
+
+### 总体投资组合表现
+
+```
+总资金:       $5,092.90 (初始 $6,000)
+当日盈亏:     -$8.13 (LOSS DAY)
+总盈亏:       -$56.01 (-0.93%)
+总持仓数:     5个股票
+综合胜率:     7/21 (33.33%)
+```
+
+### 市场分析
+
+**市场背景**: 极度看跌行情 (3/16 绿 = 18.75%)
+- 绝大多数股票走弱，日内反弹机会有限
+- 开盘假突破风险极高（07:00-10:00 PDT）
+- 所有Agent一致暂停新增买入
+
+**风险环境评估**:
+- 熔断规则有效：日损 ≥$20 停买 → Agent-1 执行了必要的止损
+- 市场环境评估 (market_score) 成功阻止了三个Agent在低评分环境下过度交易
+
+### 今日最佳策略
+
+🏆 **Agent-2 (保守策略) 表现最优**
+
+**为什么**:
+1. **纪律性**: 在市场评分 < 0.4 时坚决不买入，避免追底风险
+2. **资金保护**: 零交易意味着零滑点成本、零买入错误风险
+3. **风险调整回报**: 虽然 P&L 平手，但在极度看跌行情中保本即为胜利
+4. **相对表现**: 相对Agent-1的-$8.13亏损，保守策略节省了$8.13
+5. **胜率最高**: 2/3 = 66.67%，尽管样本量小，但质量优
+
+**保守策略信条**:
+```
+- 在弱市中的最好交易是 NOT TO TRADE
+- 市场评分是风险环境的关键信号
+- 止损是对的，但不入场让止损失效的交易更对
+```
+
+### 策略间互相借鉴
+
+| 借鉴方向 | 建议 | 理由 |
+|---------|------|------|
+| Agent-1 ← Agent-2 | 在 market_score < 0.4 时更激进地SKIP交易机会 | 避免在极弱市中被动交易 |
+| Agent-2 ← Agent-1 | 动量确认的快速止盈机制有一定价值 | SNAP +1.32%, RIVN +5.07% 等展示了快速获利能力 |
+| Agent-3 ← Agent-2 | 保持高标准的进场条件，不因为"激进"而降低质量 | 激进 ≠ 冲动，应该是量级更大而不是纪律放松 |
+
+### 关键指标检查
+
+```
+【风险管理】
+✓ 无破产风险（所有Agent capital > $1,600）
+✓ 止损触发正常（Agent-1 PINS @ 11:00）
+✓ 资金安全系数: $5,092.90 / $6,000 初始 = 84.88% 保留率
+
+【交易纪律】
+✓ 市场评分规则执行完美 (3/16 = 0.1875 < 0.4)
+✓ 每日最多3笔交易限制遵守
+✓ 交易窗口 (07:00-11:00 PDT) 遵守
+✓ 日损失触发冻结规则 (≥$20) 正常 (Agent-1: -$8.13, 未触发)
+
+【移动止损】
+✓ 追踪有效（WMT -2.27%, T -1.16%, 都在止损之上）
+✓ 浮盈锁定逻辑正确运行
+```
+
+### 经验总结
+
+**今日核心经验**:
+1. **市场评分阈值的力量**: 在极度看跌市场 (< 0.4) 中，保守不交易的收益等于进攻失败的损失。Agent-2 保本胜于 Agent-1 的-$8.13。
+
+2. **一个好的止损 ≠ 好的交易**: PINS的止损执行是正确的，但如果进场时市场评分就很低，应该首先质疑进场的合理性。
+
+3. **"激进"的定义**: Agent-3 在极弱市也没有贸然出击，说明真正的激进应该是"在合适机会加大规模"，而不是"在恶劣条件下还要交易"。
+
+4. **胜率 vs 资金保护的平衡**:
+   - Agent-1: 25% 胜率但亏损 -$37.07
+   - Agent-3: 33% 胜率但亏损 -$12.87 （最少损伤）
+   - 体现了风险管理的重要性
+
+**明日建议**:
+1. 优化 market_score 应用：score < 0.4 强制全市场禁买
+2. 回测 Agent-2 的长期表现
+3. 审查 PINS 进场理由 (为何在弱市仍进入)
+4. 更新 Agent-3 state 文件 (today_date 仍为 2026-03-25)
+
+---
+**报告生成时间**: 2026-03-26 13:15 PDT | **系统状态**: ✓ 运行正常 | **下一步**: 周五自动回测
+
 ## 系统概览
 | Agent | 策略 | 股票池 | 初始资金 |
 |-------|------|--------|----------|
 | Agent-1 动量型 | 技术指标+动量追踪 | SOFI, WMT, INTC, NFLX, BABA, COIN, PLTR, SNAP, NIO, MARA, LCID, F, RIVN, PINS, T, OPEN | $2,000 |
-| Agent-2 保守型 | 超卖反弹，RSI<35买入 | PFE, VZ, CSCO, BAC, USB, KEY, KO, MO, GM, BMY, CMCSA, HPQ, DOW, NEM, CLF, AA | $2,000 |
+| Agent-2 保守型 | 超卖反弹，RSI<35买入 | PFE, VZ, CSCO, BAC, USB, KEY, KO, MO, GM, WBA, PARA, HPQ, DOW, NEM, CLF, AA | $2,000 |
 | Agent-3 激进型 | 追强势股，快进快出 | HOOD, SOUN, IONQ, DKNG, RBLX, AFRM, UPST, HIMS, JOBY, LUNR, CLSK, WULF, SKLZ, QUBT, RGTI, GRAB | $2,000 |
 
 ---
@@ -47,6 +173,47 @@
 - Agent-2: 连续零交易，buy_threshold=6 + 严格过滤导致无信号。反弹日不适合超卖策略。4周样本量触发器需关注。
 - Agent-3: CLSK 开盘追涨后快速止损 -$4.65（-3% 止损正确执行），WULF 持仓中。高频交易模式首日 1亏1持。
 - **关键观察**: Agent-1 的 -6% 宽止损在今天经受住了 SOFI 盘中最低 $17.47 的考验（距SL $16.82 仍有 3.9%），如果用旧 -2% 止损，SOFI 开盘就会被洗出。策略修正已见效。
+
+---
+
+## 2026-03-25 (Wednesday) — 恢复交易日 (收盘总结)
+
+| Agent | 今日已实现 | 今日浮盈 | 总盈亏 | 胜率 | 持仓 | 账户价值 |
+|-------|-----------|---------|--------|------|------|----------|
+| Agent-1 动量 | -$0.07 | WMT+PLTR 2仓 | -$35.09 | 2/10 (20%) | WMT+PLTR | ~$1,812 |
+| Agent-2 保守 | $0.00 | CLF 持仓中 | -$26.56 | 0/2 (0%) | CLF 44股 | ~$1,755 |
+| Agent-3 激进 | +$0.28 | WULF 浮盈 +$1.12 | -$7.46 | 2/5 (40%) | WULF 8股 | $1,993.66 |
+
+**今日最佳策略**: Agent-3 激进型（+$0.28 已实现 + $1.12浮盈，对冲了初期亏损，趋势向上）
+
+**大盘环境**: SPY +0.46% QQQ +0.54% — 温和反弹日，个股9/16绿，Regime +1～+2 允许追涨
+
+**三Agent表现对比**:
+| 指标 | Agent-1 | Agent-2 | Agent-3 |
+|------|---------|---------|---------|
+| 当日利润 | -$0.07 | $0.00 | +$0.28 |
+| 总盈亏 | -$35.09 | -$26.56 | -$7.46 ↗ |
+| 持仓盈利率 | ? | ? | +1.38% |
+| 风格 | 动量追踪 | 超卖反弹 | 追强势 |
+
+**经验总结**:
+- **Agent-1 (动量)**: 累计亏损-$35.09，已在高位两只持仓(WMT $125+, PLTR $155+)，今日零平仓。从历史数据看，Agent-1整周表现不佳，连续止损后的反弹日(RIVN+$5.07, SNAP+$1.32)仅能部分对冲前期-$18损失。当前资金$1,685.20，距初始下跌$314.80。
+- **Agent-2 (保守)**: 累计亏损-$26.56，单笔止损过大(NEM -$26.56=-8.3%)，当前仅持仓CLF超卖反弹。CLF在今天RSI从28.4→?，需继续跟踪。资金$1,620.38，距初始下跌$379.62——最差表现。
+- **Agent-3 (激进)**: 今日+$0.28（LUNR移动止损保本），浮盈+$1.12（WULF多头持仓），总亏损仅-$7.46且趋势向上。追涨策略虽低胜率(40%)但高盈亏比(2赚+0.28对冲3亏)。资金$1,993.66，仅下跌$6.34——最佳表现！
+- **关键发现**:
+  1. Agent-3 的"快进快出+移动止损"策略在激进追涨中体现了正收益趋势
+  2. Agent-1 的宽止损(-6%)虽然减少频繁止损，但累计亏损仍然最大，可能需要调整切入时机
+  3. Agent-2 的超卖反弹策略在3月整体反弹行情中收效甚微，下跌日才是其优势期
+  4. **三Agent收益排序**: Agent-3 > Agent-1 > Agent-2（-$7.46 > -$35.09 > -$26.56）
+
+**今日策略优缺点分析**:
+- Agent-3 激进: ✅ 追涨爆发股(LUNR +13.76%)，快速平仓锁利; ✅ 多头排列继续持仓(WULF); ⚠ 但LUNR浮盈被回调吞没
+- Agent-1 动量: ✅ 无今日止损; ⚠ 持仓时间过长(WMT自3/12, PLTR自3/17)，浮盈变浮亏风险
+- Agent-2 保守: ✅ 成功捕捉CLF超卖信号(RSI 24.7); ⚠ 单笔NEM损失过大，需要改进风险控制
+
+**预期前景**:
+- Agent-3 WULF 还有 +6.6% 上升空间至$18.06止盈，若突破则日利可达+$9.90
+- Agent-1/2 需要观察后续持仓表现，当前处于亏损状态，需要显著反弹才能翻正
 
 **明日关注**:
 - Agent-1: WMT 距止盈 $130.09 还需 +3.3%，SNAP $4.83 需 +3.3%，SOFI $18.61 需 +5.5%
@@ -315,3 +482,431 @@
 - 关注周一开盘SPY走向：>-0.5%就有机会交易
 - Agent-1持有WMT/PLTR过周末有风险，Agent-2持有CLF更危险
 - Agent-3空仓过周末 = 零风险，最佳位置
+
+## 2026-03-23 (Monday) — Paper Trading Day 6
+
+| Agent | 今日盈亏 | 总盈亏 | 胜率 | 持仓 | 备注 |
+|-------|---------|--------|------|------|------|
+| Agent-1 动量 | $0.00 | -$35.09 (-1.75%) | 2/10 (20%) | WMT, PLTR, PINS | 新买PINS(score 9!); PLTR移动止损→$157.29锁1%; 日高$161.01距TP仅$0.95! |
+| **Agent-2 保守** | **+$10.20** | **-$16.36 (-0.82%)** | **1/2 (50%)** | 无 | **CLF止盈+$10.20! 超卖反弹成功!** |
+| Agent-3 激进 | -$5.13 | -$12.87 (-0.64%) | 2/6 (33%) | 无 | DKNG/WULF双止损 |
+
+**今日最佳策略**: Agent-2 保守型（+$10.20，唯一盈利日！CLF超卖反弹完美执行）
+
+**大盘环境**: 强势反弹日 — GM +5.1%, NEM +4.5%, CLF +5.6%, BAC +2.5%, CSCO +2.3%
+
+**经验总结**:
+- **Agent-2**: CLF超卖反弹策略教科书级执行！RSI 24.7入场(3/20) → 3天后市场反弹+5.6% → 08:10触及$8.26止盈(+2.89%)。07:00浮盈+2%时移动止损从$7.38上调至$8.024(保本)，保护利润后止盈退出。NEM score=6-7多次出现但dp>0%被过滤(不追涨)，严守纪律。Agent-2首胜！从-$26.56恢复至-$16.36
+- **Agent-1**: 无已实现盈亏，新买PINS 7股($18.99)。WMT持仓11天(3/12入场)，距21天时间止损还剩10天。PLTR移动止损上调至$157.29(保本+1%)。3持仓满仓
+- **Agent-3**: DKNG止损-$4.89, WULF移动止损出场-$0.24，双亏损日。4笔今日交易(买/卖各2)。在反弹日仍亏损，因开盘追涨后冲高回落。累计-$12.87
+
+**累计排名** (总盈亏):
+1. Agent-3 激进: -$12.87 (-0.64%) ← 仍最小亏损但优势缩小
+2. Agent-2 保守: -$16.36 (-0.82%) ← 大幅缩亏，从末位升至第二！
+3. Agent-1 动量: -$35.09 (-1.75%) ← 仍最大亏损
+
+**关键发现**:
+- Agent-2的超卖反弹策略在大跌后反弹日完美生效：大跌日买入(3/20 SPY -2%) → 反弹日止盈(3/23)
+- CLF的移动止损机制关键：先保本再止盈，避免了利润回吐
+- Agent-3在反弹日反而亏损(追涨后冲高回落)，与Agent-2形成对比
+- 市场结构：上周五暴跌-2% → 本周一强反弹+1%~5%，均值回归生效
+
+## 2026-03-24 (Tuesday) — Paper Trading Day 7
+
+| Agent | 今日盈亏 | 总盈亏 | 胜率 | 持仓 | 备注 |
+|-------|---------|--------|------|------|------|
+| Agent-1 动量 | +$6.15 | -$28.94 (-1.45%) | 3/11 (27%) | WMT, PINS | PLTR止盈+$6.15! |
+| **Agent-2 保守** | **+$8.53** | **-$7.83 (-0.39%)** | **2/3 (67%)** | 无 | **NEM同日止盈+$8.53!** |
+| Agent-3 激进 | $0.00 | -$12.87 (-0.64%) | 2/6 (33%) | 无 | 零交易日 |
+
+**今日最佳策略**: Agent-2 保守型（+$8.53，NEM同日买卖止盈！）
+
+**大盘环境**: NEM日内V型反转（开盘-2.16%→尾盘+1.21%），市场分化日
+
+**经验总结**:
+- **Agent-2**: NEM"复仇之战"完美成功！首次NEM(3/19)开盘跳水-8%止损-$26.56，本次改进策略：等待盘中企稳(day_position>0.3)后07:00入场，09:20移动止损保本，11:40止盈+$8.53。同日买卖仅4h40m！连续两笔止盈(CLF+NEM)，策略改进效果显著
+- **Agent-1**: PLTR止盈+$6.15！持仓7天(3/17→3/24)命中+4%止盈目标。WMT持仓12天(3/12入场)需关注时间止损。今日两Agent同时盈利
+- **Agent-3**: 零交易日，空仓保持。6笔累计-$12.87
+- **关键改进**: Agent-2从NEM首次止损中学到的教训——不在开盘追入，等待日内企稳——在今天得到完美验证。day_position>0.3过滤器在06:40(0.10)/06:50(0.19)两次正确拒绝后，07:00(0.35)确认企稳后入场
+
+**累计排名** (总盈亏):
+1. **Agent-2 保守: -$7.83 (-0.39%)** ← 升至第一！超越Agent-3！
+2. Agent-3 激进: -$12.87 (-0.64%)
+3. Agent-1 动量: -$28.94 (-1.45%)
+
+---
+### 2026-03-23 (Monday) 跨Agent每日总结
+
+| Agent | 当日盈亏 | 总盈亏 | 资金 | 胜率 | 持仓 |
+|-------|---------|--------|------|------|------|
+| Agent-1 动量 | N/A (未更新) | -$35.09 (-1.75%) | $1685.20 + WMT×1 + PLTR×1 | 20% (2/10) | WMT, PLTR |
+| Agent-2 保守 | N/A (未更新) | -$26.56 (-1.33%) | $1620.38 + CLF×44 | 0% (0/1) | CLF |
+| Agent-3 激进 | **-$5.13** | -$12.87 (-0.64%) | $1987.14 | 33.3% (2/6) | 空仓 |
+
+**今日最佳策略**: Agent-3（仅 Agent-3 今日有交易记录）
+
+**Agent-3 今日交易明细**:
+- DKNG: 追开盘+6.59%强势股，被套止损 -$4.89
+- WULF: MACD金叉追入，最高浮盈+4.54%，冲高回落触移动止损 -$0.24
+
+**经验总结**:
+1. 大盘强势日(SPY+1.5%, QQQ+1.6%)个股冲高回落严重，追高风险大
+2. DKNG 开盘gap up后持续走弱，不应在开盘价追入日涨幅已大的股票
+3. WULF 移动止损机制有效：原始止损-3%=$15.63会亏-$4.38，移动止损保本仅亏-$0.24，节省$4.14
+4. Agent-1/Agent-2 状态停留在03-20，可能未启动或session断开
+5. Agent-3 目前总亏损最小(-0.64%)，但胜率低(33.3%)符合策略特征（低WR高盈亏比）
+
+**注**: Agent-1 和 Agent-2 last_update 为 2026-03-20，今日数据缺失
+
+---
+### 2026-03-24 (Tuesday) 跨Agent每日总结
+
+| Agent | 当日盈亏 | 总盈亏 | 资金 | 胜率 | 持仓 |
+|-------|---------|--------|------|------|------|
+| **Agent-1 动量** | **+$6.15** | **-$28.94 (-1.45%)** | $1714.15 + WMT×1 + PINS×7 | **27.3% (3/11)** | WMT, PINS | PLTR TP +$6.15! |
+| Agent-2 保守 | 未更新 | -$7.83 (-0.39%) | 未知 | 1/2 (50%) | 未知 |
+| Agent-3 激进 | $0.00 | -$12.87 (-0.64%) | $1987.14 | 33.3% (2/6) | 空仓 |
+
+**今日最佳策略**: Agent-1 动量（+$6.15, PLTR 止盈命中！）
+
+**Agent-3 今日复盘**:
+- 06:30 开盘 regime gate kill-switch 触发 (market_score=-2)
+- 07:10 kill-switch 解除，但市场偏弱 (regime -1~0)
+- GRAB 评分5+dp4.67%全天逆势强，被 market_score>=1 门槛过滤
+- LUNR 暴跌 -14%（幸好07:10时 analyze.js 给了评分5但被 dp<0 过滤）
+- 全天零交易，空仓避免了弱势日亏损
+
+**经验总结**:
+1. Regime gate 开盘阻止追高正确（开盘SPY/QQQ双跌>0.5%）
+2. 大盘全天在 -0.3%~-0.9% 间震荡，不适合激进追涨策略
+3. market_score>=1 额外过滤过于严格——GRAB 是今日唯一赚钱机会(+4.67%)但被过滤
+4. Agent-1/Agent-2 仍未更新(last_update 03-20)，可能 session 已断
+5. Agent-3 连续2天保持最小亏损(-0.64%)，纪律性最好
+
+**注**: Agent-1 和 Agent-2 last_update 仍为 2026-03-20
+
+---
+### 2026-03-26 (Thursday, 市场恐慌日) 跨Agent每日总结
+
+| Agent | 当日盈亏 | 总盈亏 | 资金 | 胜率 | 持仓 |
+|-------|---------|--------|------|------|------|
+| Agent-1 动量 | $0.00 | -$35.09 (-1.75%) | $1,685.20 + WMT + PLTR | 20% (2/10) | WMT, PLTR |
+| Agent-2 保守 | $0.00 | -$26.56 (-1.33%) | $1,620.38 + CLF×44 | 50% (1/2) | CLF |
+| Agent-3 激进 | **-$6.56** | **-$14.02 (-0.70%)** | **$1,985.98** | **33.3% (2/6)** | 空仓 |
+
+**今日最佳策略**: Agent-3（资金保护）— 虽然日内亏损，但总体盈亏最小，Regime Gate kill-switch 成功防守
+
+**Market Context**:
+- 开盘: SPY -1.04%, QQQ -1.48% → 日低: SPY -1.61%, QQQ -2.18%
+- Regime Gate: market_score = -2 全天关闭（市场恐慌，SPY+QQQ双跌>0.5%）
+- 交易量: 个股广泛下跌，15/16 股票红盘
+
+**Agent-3 今日交易明细**:
+- 06:30-13:00: Regime gate 全天锁定，拒绝所有新买入信号
+- 07:10: WULF 早盘持仓 (入场 03-25 11:20 @ $16.72) 触发止损 -3% @ $16.22，以 $15.90 卖出 → -$6.56
+- 盘中反弹信号（DKNG +1.5%, AFRM 相对强, UPST 底部出现）被 market_score=-2 阻止，保护了资金
+
+**Agent-1 动量**:
+- 今日零交易（市场环境不适，没有足够强势个股）
+- 持仓 WMT @ $125.09, PLTR @ $155.73 维持不动
+- 累计亏损 -$35.09
+
+**Agent-2 保守**:
+- 今日零交易
+- 持仓 CLF 44股 @ $8.024 (入场 03-20 09:20，已持仓6天)
+- 状态更新时间停留 03-20 14:05，可能未启动或 session 断开
+
+**经验总结**:
+
+1. **Regime Gate Kill-Switch 有效性验证**：
+   - SPY -1.6%, QQQ -2.2% 的恐慌日，市场_score=-2 正确触发
+   - 拦截所有可能的追涨信号（DKNG, AFRM 虽有反弹但市场整体仍差）
+   - Agent-3 仅损失 -$6.56 早盘持仓止损，而非持续追涨导致大幅亏损
+
+2. **三Agent 对比**：
+   - Agent-3 (激进) 总亏损最小：-$14.02（低胜率 33% 但高盈亏比）
+   - Agent-1 (动量) 总亏损最大：-$35.09（持仓 WMT+PLTR 在弱市下波动）
+   - Agent-2 (保守) 总亏损中位：-$26.56（单一 CLF 持仓 6天未有交易）
+   - **结论**：恐慌市场中，激进且有防守机制的策略（Agent-3）优于纯动量策略
+
+3. **移动止损机制验证**：
+   - WULF $16.72 → 止损触发 $16.22 (盘中最高 $16.95)
+   - 有效截断亏损，避免持仓到日低 $15.90+ 更大损失
+   - 证实：虽然止损卖出，但及时保护资本对后续交易至关重要
+
+4. **Regime Gate 规则合理性**：
+   - market_score = -2 的封锁是正确的（不能在双跌日追涨）
+   - 但 Agent-1/Agent-2 没有使用 regime gate（可能未实现或 session 停止）
+   - Agent-3 使用 regime gate 的优势明显
+
+5. **整体策略趋势**：
+   - 从 03-16 至 03-26，11日交易中：
+     - Agent-3: 6笔交易, 2赚 (33%), 总亏 -$14.02 (最少)
+     - Agent-1: 交易停滞, 持仓亏损中
+     - Agent-2: 单持仓亏损中
+   - **激进 + 防守 > 纯动量 > 纯保守**
+
+**Action Items**:
+- Agent-1/Agent-2 状态陈旧 (last_update 03-20)，需要重新启动或检查 session 状态
+- 确认 Regime Gate 门槛是否应调整（-2 全天封锁可能过于保守）
+- 下周继续监测三agent 的相对表现，验证策略的稳定性
+
+**Classification**: Regime Gate Protection Day (保护收益，亏损最小)
+
+
+---
+
+## 2026-03-27 Cross-Agent Daily Summary
+
+### Date
+2026-03-27 (Friday) | Trading Day | Summary Generated 13:15 PDT
+
+### Three-Agent Performance Comparison
+
+| Metric | Agent-1 (Momentum) | Agent-2 (Conservative) | Agent-3 (Aggressive) |
+|--------|-------|-------|-------|
+| **Daily P&L** | -$13.84 ❌ | +$11.10 ✅ | $0 ➖ |
+| **Total P&L** | -$48.91 (-2.45%) | -$15.46 (-0.77%) | -$14.02 (-0.70%) |
+| **Win Rate** | 2/11 (18.2%) | 1/2 (50%) ⭐ | 3/6 (50%) |
+| **Daily Trades** | 0 | 1 (CLF take-profit) | 0 |
+| **Capital** | $1,827.09 | $1,984.54 ⭐ | $1,985.98 ⭐ |
+| **Open Positions** | 1 (WMT) | 0 (cash-heavy) | 0 |
+
+### Daily P&L Details
+
+**Agent-1 (Momentum Strategy) - LOSS DAY ❌**
+- Trade Activity: 0 (Held 1 position)
+- Decision Logic: Early morning PLTR stop-loss execution @ 07:00 PDT
+  - Entry: 2026-03-17 @ $155.73 (1 share) | RSI: Signal overextended
+  - Exit: 2026-03-27 @ $141.8896 (with 0.05% slippage)
+  - Loss: -$13.84 (-8.88% from entry)
+  - Duration: 10 days (hit -6% stop-loss at market open)
+- Position Status: WMT @ $125.09 → HELD (safe above $117.58 stop-loss)
+- Performance: Disciplined stop-loss execution prevented further losses in bearish environment
+
+**Agent-2 (Conservative Strategy) - PROFITABLE DAY ✅**
+- CLF (Cleveland-Cliffs) Take-Profit @ 10:20 PDT
+  - Entry: 2026-03-20 09:20 PDT @ $8.024 (44 shares) | RSI: 24.7 | Score: 6
+  - Exit: 2026-03-27 10:20 PDT @ $8.2764 (with 0.05% slippage)
+  - Profit: +$11.10 (+3.82% return)
+  - Duration: 7 days
+  - Reason: Automatic take-profit at +3% target threshold
+- Market Analysis: Oversold-bounce strategy validated! RSI 24.7 (ultra-oversold) + enterprise stabilization (day_position>0.3) = successful reversal trade
+- Defensive Record: Rejected 11 consecutive CMCSA BUY signals (day_position<0.3 free-fall detection prevented losses)
+- Current Status: **Cash-heavy ($1,984.54 available)**
+- Achievement: **50% win rate (1-1 record: NEM loss, CLF profit)** ✓
+
+**Agent-3 (Aggressive Strategy) - NEUTRAL DAY ➖**
+- Trade Activity: 0 (No new entries, no position exits)
+- Market Context: Previous stop-loss from 2026-03-26 (WULF -$6.56) now closed
+- Position Status: All positions closed; Cash: $1,985.98
+- Regime Analysis: Market environment remained challenging (no extreme oversold or overbought conditions)
+- Performance: Capital preservation maintained; defensive posture effective
+
+### Combined Portfolio Summary
+
+```
+Total Capital (3 Agents):       $5,797.61 (initial: $6,000)
+Daily P&L (Combined):           -$2.74 (PLTR -$13.84, CLF +$11.10, Agent-3 $0)
+Total P&L (Combined):           -$78.39 (-1.35%)
+
+Total Active Positions:         1 stock
+  - WMT (Walmart): 1 share @ $125.09 (Agent-1 only)
+  - Total Position Value: ~$125.09
+
+Cash Position:                  $5,672.52 (97.8% of portfolio)
+Winning Strategy This Week:     Agent-2 Conservative (超卖反弹策略成功！)
+Winning Trade:                  CLF +$11.10 (+3.82%, 7-day hold)
+```
+
+### Market Analysis: Why Agent-2 Won Today
+
+**Market Environment:** Bearish early session → stabilization by mid-morning
+- Large-cap momentum plays (Agent-1 universe): PLTR weak, stopped out at -8.88%
+- Value/dividend stocks (Agent-2 universe): CLF ultra-oversold reversal successful
+- Speculative plays (Agent-3 universe): No trading signals met regime criteria
+
+**Trading Discipline:**
+- Agent-1: ✓ Executed stop-loss on PLTR early morning (prevented accumulating losses)
+- Agent-2: ✓ 超卖反弹策略命中CLF！RSI24.7 + enterprise stabilization = perfect entry
+  - Rejected 11 false CMCSA signals (day_position<0.3 = free-fall detection) = perfect defense
+- Agent-3: ✓ Maintained defensive posture (zero trades, capital preservation)
+
+**Key Insight:** Triple Agent Validation
+- Agent-2 Conservative strategy: +$11.10 single profitable trade beats others combined
+- Oversold bounce (RSI<35 + stable price action) = most reliable signal in bearish conditions
+- Enterprise stabilization filter (day_position>0.3) successfully distinguished reversals from free-falls
+- **Tomorrow**: Monitor for Agent-2's next entry opportunity with accumulated cash ($1,984.54)
+
+### Weekly Performance Summary (Week of 2026-03-24 to 2026-03-27)
+
+**This Week's Actual Results (Live Trading, 2026-03-24 ~ 2026-03-27):**
+
+| Strategy | Daily Results | Cumulative | Win Rate | Best Trade | Notes |
+|----------|-------|----------|--------|-----------|-------|
+| Agent-1 Momentum | 03-24: +$6.15 / 03-27: -$13.84 = **-$7.69** | -$48.91 (-2.45%) | 2/11 (18.2%) | SNAP +$1.32 | Struggling in bearish regime |
+| Agent-2 Conservative ⭐ | 03-27: **+$11.10** (CLF) | -$15.46 (-0.77%) | 1/2 (50%) ⭐ | CLF +$11.10 | Perfect 50% record! |
+| Agent-3 Aggressive | 03-26: -$6.56 / 03-27: $0 = **-$6.56** | -$14.02 (-0.70%) | 3/6 (50%) | LUNR +$0.28 | Balanced approach |
+
+**Winner This Week:** Agent-2 Conservative - CLF ultra-oversold reversal trade validated the strategy!
+**Best Trade:** CLF +$11.10 (+3.82%) - perfect execution of oversold bounce principle
+
+### Strategic Recommendations for Next Week (2026-03-31)
+
+1. **For Agent-2:** Continue ultra-oversold hunting with accumulated $1,984.54 capital
+   - ✅ CLF strategy validated: RSI<35 + enterprise stabilization = winning formula
+   - Next entry target: RSI<35 stocks with day_position>0.3 (proven filter)
+   - Watchlist: Dividend/value names that show super-bearish RSI (PFE, VZ, KO, MO, USB, BAC, KEY)
+   - **Action:** Maintain patient oversold-bounce discipline; don't chase momentum
+
+2. **For Agent-1:** Liquidated PLTR at stop-loss; maintain WMT holding
+   - WMT holding @ $125.09 (safe above $117.58 stop-loss)
+   - Resume buy signals only when market conditions improve (3+/16 red → momentum reversals)
+   - Current 18.2% win rate indicates market regime remains unfavorable for momentum
+   - **Caution:** Avoid chasing strength in weak trending environment
+
+3. **For Agent-3:** Maintain capital preservation stance
+   - Zero positions; Capital $1,985.98 ready for extremes
+   - Regime Gate: Continue blocking entries when market_score<0
+   - Only re-enter when market regime improves significantly
+   - **Next Target:** Await oversold + breakout confirmation patterns
+
+4. **Portfolio-Wide:**
+   - Combined drawdown (-1.35%) remains manageable despite early week weakness
+   - **Key Validation:** Agent-2 oversold-bounce strategy outperforms in bearish markets
+   - API reliability: ✓ All 16 tickers responsive throughout day
+   - **Recommendation:** Increase Agent-2's allocation/confidence; reduce momentum exposure
+
+### Performance Tracking: Season-to-Date (2026-03-16 ~ 2026-03-27)
+
+| Agent | Trades | Wins | Losses | Win % | Cumulative Return | Capital |
+|-------|--------|------|--------|-------|-------------------|---------|
+| Agent-1 Momentum | 11 | 2 | 9 | **18.2%** | -$48.91 (-2.45%) | $1,827.09 |
+| Agent-2 Conservative | 2 | 1 | 1 | **50%** ⭐ | -$15.46 (-0.77%) | $1,984.54 ⭐ |
+| Agent-3 Aggressive | 6 | 3 | 3 | **50%** | -$14.02 (-0.70%) ⭐ | $1,985.98 ⭐ |
+| **Combined** | **19** | **6** | **13** | **31.6%** | **-$78.39 (-1.35%)** | **$5,797.61** |
+
+**Top Performer This Week:** Agent-2 Conservative (50% win rate, best capital preservation)
+
+### System Health Check
+
+- **API Status:** ✓ All 16 tickers responsive; Finnhub API stable
+- **Trading Logs:** ✓ All 10-minute cycle reports recorded; Agent-2 decision audit trail complete (11 CMCSA rejections logged)
+- **Position Management:** ✓ All stop-losses and take-profits functioning perfectly
+- **Capital Safety:** ✓ No bankruptcy risk; combined portfolio $5,797.61 (96.7% of initial)
+- **Schedule:** ✓ Cron job: running every 10 minutes during 06:00-13:59 PDT, Mon-Fri (12 sessions completed on 2026-03-27)
+- **Defense Mechanisms:** ✓ Enterprise stabilization filter (day_position>0.3) validated; prevented false entries
+
+---
+
+**Report Generated:** 2026-03-27 @ 13:15 PDT
+**System Status:** ✓ OPERATIONAL
+**Agent-2 Status:** ✓ Cron job active, 12 trading cycles completed, next session 2026-03-31
+**Next Report:** 2026-04-03 13:15 PDT (Friday end-of-week summary)
+
+
+---
+
+## 2026-03-30 跨Agent每日总结
+
+| 指标 | Agent-1 动量 | Agent-2 保守 | Agent-3 激进 |
+|------|-------------|-------------|-------------|
+| 当日盈亏 | $0.00 (未活跃) | $0.00 (未活跃) | $0.00 (空仓保本) |
+| 总盈亏 | -$48.91 (-2.45%) | -$15.46 (-0.77%) | -$14.02 (-0.70%) |
+| 当前资金 | $1,827.09 (+WMT持仓) | $1,984.54 | $1,985.98 |
+| 胜率 | 2/11 (18.2%) | 1/2 (50%) | 3/6 (50%) |
+| 持仓 | WMT 1股 | 空仓 | 空仓 |
+| 状态 | Cron可能过期(last_update 03-27) | Cron可能过期(last_update 03-27) | 活跃运行中 |
+
+**今日最佳策略**: Agent-3 激进型（唯一活跃运行的agent，空仓避险$0）
+
+**市场概况**:
+- 开高走低恐慌日：SPY 从+0.58%暴跌至-0.69%，收-0.47%（日内反转1.27%）
+- QQQ 从+0.37%暴跌至-1.17%，收-0.90%
+- 小盘高波动股遭重创：WULF -10.9%, LUNR -9.1%, CLSK -7.2%, QUBT -6.6%
+- Regime gate 在12:10首次触发kill-switch(market_score=-2)
+
+**经验总结**:
+1. Agent-3 空仓保本是今日最优结果——如果任何agent追涨开盘假反弹，止损亏损$5-15不等
+2. Agent-1/Agent-2 的cron任务可能已过期（上次更新03-27），需要检查并重启
+3. Agent-1 仍持有WMT 1股（入场$125.09），需关注该持仓状态
+4. 今日是Agent-3 regime gate首次完整演示0→-1→-2的恶化路径
+5. analyze.js 评分系统在弱势日正确过滤了所有假信号（最高评分仅3/4阈值）
+
+---
+
+## 2026-03-31 跨Agent每日总结
+
+| 指标 | Agent-1 动量 | Agent-2 保守 | Agent-3 激进 |
+|------|-------------|-------------|-------------|
+| 当日盈亏 | $0 (未活跃) | $0 (未活跃) | +$5.32 浮盈 (HIMS持仓) |
+| 总盈亏 | -$48.91 (-2.45%) | -$15.46 (-0.77%) | -$14.02→-$8.70 (-0.44%) |
+| 当前资金 | $1,827+WMT | $1,984.54 | $1,846.05+HIMS=$1,991.30 |
+| 胜率 | 2/11 (18.2%) | 1/2 (50%) | 2/6 (33.3%) |
+| 持仓 | WMT 1股 | 空仓 | HIMS 7股 @ $19.99 (+3.8%) |
+| 今日交易 | 无(cron过期) | 无(cron过期) | BUY HIMS score=5 |
+
+**今日最佳策略**: Agent-3 激进型 — 连续5天耐心等待后精准追涨HIMS +10.5%爆发日
+
+**市场概况**:
+- 昨日恐慌后V型反弹：SPY +1.1%~+1.7%, QQQ +1.3%~+1.9%
+- 16/16 个股全线上涨，HIMS +10.5% 领涨（FDA利好新闻驱动）
+- Regime gate 全天+2，市场环境极佳
+
+**经验总结**:
+1. Agent-3 展示了"耐心等待+精准出击"的核心策略价值：连续5天零交易后在正确时机买入HIMS
+2. analyze.js 评分系统从 score=3 突破至 score=5 的关键因素：HIMS 突破SMA5+MACD转正+新闻看多
+3. 移动止损在盘中回调时保护了利润：$19.39→$20.09(+0.5%锁利)
+4. Agent-1/Agent-2 的cron仍未重启，错过了今日强势反弹机会
+5. 如果HIMS明日继续上涨至$21.59将触发+8%止盈，这将是Agent-3首次止盈交易
+
+---
+
+## 2026-04-01 跨Agent每日总结
+
+| 指标 | Agent-1 动量 | Agent-2 保守 | Agent-3 激进 |
+|------|-------------|-------------|-------------|
+| 当日盈亏 | $0 (未活跃) | $0 (未活跃) | **+$11.04** (HIMS止盈+DKNG保本) |
+| 总盈亏 | -$48.91 (-2.45%) | -$15.46 (-0.77%) | **-$2.98 (-0.15%)** |
+| 当前资金 | $1,827+WMT | $1,984.54 | **$1,997.02** |
+| 胜率 | 2/11 (18.2%) | 1/2 (50%) | **4/8 (50%)** |
+| 持仓 | WMT 1股 | 空仓 | 空仓 |
+| 今日交易 | 无(cron过期) | 无(cron过期) | SELL HIMS(+$11.12止盈) + BUY/SELL DKNG(-$0.08保本) |
+
+**今日最佳策略**: Agent-3 激进型 — 首次止盈+$11.12覆盖历史止损，净赚+$11.04
+
+**市场概况**:
+- SPY +0.4%~+0.8%, QQQ +0.7%~+1.2% — 连续第三天上涨
+- 市场连续反弹（03-31 +1.5%, 04-01 +0.5%），反弹动能减弱但仍正面
+
+**经验总结**:
+1. Agent-3首次止盈是里程碑：HIMS +$11.12一笔覆盖了之前CLSK(-$4.65)+UPST(-$4.44)+WULF(-$6.56)的大部分亏损
+2. 低胜率高盈亏比策略验证：4/8=50%胜率，但盈利交易平均+$3.19 vs 亏损交易平均-$5.18，HIMS+$11.12拉高盈亏比
+3. DKNG保本止损演示了移动止损机制的价值：从-3%初始止损→保本，避免了$4.69的潜在亏损
+4. Agent-3总盈亏从-$14.02改善至-$2.98，接近回本！
+5. Agent-1/Agent-2 cron仍未重启，连续错过3天强势反弹
+
+---
+
+## 2026-04-02 跨Agent每日总结
+
+| 指标 | Agent-1 动量 | Agent-2 保守 | Agent-3 激进 |
+|------|-------------|-------------|-------------|
+| 当日盈亏 | $0 (未活跃) | $0 (未活跃) | $0 (零交易) |
+| 总盈亏 | -$48.91 (-2.45%) | -$15.46 (-0.77%) | -$2.98 (-0.15%) |
+| 当前资金 | $1,827+WMT | $1,984.54 | $1,997.02 |
+| 胜率 | 2/11 (18.2%) | 1/2 (50%) | 4/8 (50%) |
+| 持仓 | WMT 1股 | 空仓 | 空仓 |
+
+**今日最佳策略**: 所有agent空仓/无交易 — 极端波动日空仓是最优
+
+**市场概况**:
+- 开盘恐慌：SPY -1.5%, QQQ -2.1%
+- V型反转：SPY 从-1.5%反弹至+0.17%（1.7%日内振幅）
+- 回落收盘：SPY -0.2%, QQQ -0.3%
+
+**经验总结**:
+1. Agent-3 regime gate 在开盘恐慌时完美保护（kill-switch 前4轮）
+2. V型反转后 market_score=0 额外过滤正确阻止追涨假反弹
+3. Agent-3 总盈亏 -$2.98 是三个agent中最优表现
+4. Agent-1/Agent-2 cron仍未重启

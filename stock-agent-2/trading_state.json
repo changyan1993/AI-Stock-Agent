@@ -1,20 +1,6 @@
 {
-  "capital": 1620.38,
-  "positions": [
-    {
-      "symbol": "CLF",
-      "shares": 44,
-      "entry_price": 8.024,
-      "actual_buy_price": 8.024,
-      "stop_loss": 7.38,
-      "take_profit": 8.26,
-      "entry_date": "2026-03-20",
-      "entry_time": "09:20 PDT",
-      "score": 6,
-      "rsi_at_entry": 24.7,
-      "reason": "oversold_bounce"
-    }
-  ],
+  "capital": 1984.54,
+  "positions": [],
   "trade_history": [
     {
       "symbol": "NEM",
@@ -28,12 +14,25 @@
       "reason": "stop_loss",
       "score_at_entry": 6,
       "rsi_at_entry": 28.4
+    },
+    {
+      "symbol": "CLF",
+      "shares": 44,
+      "entry_price": 8.024,
+      "exit_price": 8.2764,
+      "entry_date": "2026-03-20",
+      "exit_date": "2026-03-27",
+      "profit": 11.10,
+      "profit_pct": 3.82,
+      "reason": "take_profit",
+      "score_at_entry": 6,
+      "rsi_at_entry": 24.7
     }
   ],
-  "daily_profit": 0,
-  "total_profit": -26.56,
-  "today_date": "2026-03-20",
-  "last_update": "2026-03-20 14:05 PDT",
+  "daily_profit": 11.10,
+  "total_profit": -15.46,
+  "today_date": "2026-03-27",
+  "last_update": "2026-03-27 14:05 PDT",
   "trades_today": 1,
   "bankrupt": false
 }
